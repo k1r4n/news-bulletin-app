@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import config from './config.json';
-import styles from './main.css';
 
 class Greeter extends Component{
   	render() {
@@ -10,4 +9,4 @@ class Greeter extends Component{
   	}
 }
 
-export default Greeter
+export default Greeter;

@@ -26,5 +26,5 @@ module.exports = {
     	contentBase: "./public",
 		historyApiFallback: true,
 		inline: true
-  	} 
+	}
 }
