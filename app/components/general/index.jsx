@@ -20,15 +20,15 @@ class General extends Component {
             data = this.state.data;
         }
         return(
-            <div className="container">
+            <div className="col-xs-12">
                 <div className="panel panel-primary" style={{ marginTop: '20px' }}>
                     <div className="panel-heading">
-                        <h1 style={{ marginLeft: '20px' }}>General</h1>
+                        <h1 style={{ marginLeft: '20px' }}><i className="fa fa-google" aria-hidden="true"></i>  General</h1>
                     </div>
                     <div className="panel-body">
                         {
                             data && data.map((data, index) => (
-                                    <div className="col-xs-4" key={data._id}>
+                                    <div className="col-xs-3" key={data._id}>
                                         <div className="panel panel-info" style={{ minHeight: '250px' }}>
                                             <div className="panel-heading">
                                                 <h4 style={{ marginLeft: '5px'}}>{data._source.name}</h4>
