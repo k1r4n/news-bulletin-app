@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Politics extends Component {
+class Technology extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -9,7 +9,7 @@ class Politics extends Component {
     }
 
     fetchChannelList() {
-      axios.get('http://localhost:9200/news-bulletin/top-channels/_search?pretty=true&size=100&q=category:politics')
+      axios.get('http://localhost:9200/news-bulletin/top-channels/_search?pretty=true&size=100&q=category:technology')
           .then(response => {
               this.setState({ data: response.data.hits.hits});
           });
@@ -23,7 +23,7 @@ class Politics extends Component {
             <div className="col-xs-12">
                 <div className="panel panel-primary" style={{ marginTop: '20px' }}>
                     <div className="panel-heading">
-                        <h1 style={{ marginLeft: '20px' }}><i className="fa fa-pinterest-p" aria-hidden="true"></i>  Politics</h1>
+                        <h1 style={{ marginLeft: '20px' }}><i className="fa fa-tumblr-square" aria-hidden="true"></i>  Technology</h1>
                     </div>
                     <div className="panel-body">
                         {
@@ -48,4 +48,4 @@ class Politics extends Component {
     }
 }
 
-export default Politics;
+export default Technology;
