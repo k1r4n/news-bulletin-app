@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Topbar from './fragments/topbar';
 import TopbarRoutes from './fragments/topbar-routes';
+import Footer from './fragments/footer';
 
 class Home extends Component{
   	render() {
@@ -8,6 +9,7 @@ class Home extends Component{
             <div>
                 <Topbar />
                 <TopbarRoutes />
+                <Footer />
             </div>
       	);
   	}

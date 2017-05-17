@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import GeneralRoutes from './articles';
 
 class General extends Component {
     constructor(props) {
@@ -21,26 +22,28 @@ class General extends Component {
         }
         return(
             <div className="col-xs-12">
-                <div className="panel panel-primary" style={{ marginTop: '20px' }}>
-                    <div className="panel-heading">
-                        <h1 style={{ marginLeft: '20px' }}><i className="fa fa-google" aria-hidden="true"></i>  General</h1>
-                    </div>
-                    <div className="panel-body">
-                        {
-                            data && data.map((data, index) => (
-                                    <div className="col-xs-3" key={data._id}>
-                                        <div className="panel panel-info" style={{ minHeight: '250px' }}>
-                                            <div className="panel-heading">
-                                                <h4 style={{ marginLeft: '5px'}}>{data._source.name}</h4>
-                                            </div>
-                                            <div className="panel-body">
-                                                {data._source.description}
+                <div className="container">
+                    <div className="panel panel-primary" style={{ marginTop: '20px' }}>
+                        <div className="panel-heading">
+                            <h1 style={{ marginLeft: '20px' }}><i className="fa fa-google" aria-hidden="true"></i>  General</h1>
+                        </div>
+                        <div className="panel-body">
+                            {
+                                data && data.map((data, index) => (
+                                        <div className="col-xs-6" key={data._id}>
+                                            <div className="panel panel-info" style={{ minHeight: '250px' }}>
+                                                <div className="panel-heading">
+                                                    <h4 style={{ marginLeft: '5px'}}>{data._source.name}</h4>
+                                                </div>
+                                                <div className="panel-body">
+                                                    {data._source.description}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    )
                                 )
-                            )
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

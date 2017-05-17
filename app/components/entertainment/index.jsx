@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+// import GeneralRoutes from './articles';
 
-class Technology extends Component {
+class Entertainment extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -9,7 +10,7 @@ class Technology extends Component {
     }
 
     fetchChannelList() {
-      axios.get('http://localhost:9200/news-bulletin/top-channels/_search?pretty=true&size=100&q=category:technology')
+      axios.get('http://localhost:9200/news-bulletin/top-channels/_search?pretty=true&size=100&q=category:entertainment')
           .then(response => {
               this.setState({ data: response.data.hits.hits});
           });
@@ -21,10 +22,10 @@ class Technology extends Component {
         }
         return(
             <div className="col-xs-12">
-                <div className="container">
+              <div className="container">
                     <div className="panel panel-primary" style={{ marginTop: '20px' }}>
                         <div className="panel-heading">
-                            <h1 style={{ marginLeft: '20px' }}><i className="fa fa-tumblr-square" aria-hidden="true"></i>  Technology</h1>
+                            <h1 style={{ marginLeft: '20px' }}><i className="fa fa-edge" aria-hidden="true"></i>  Entertainment</h1>
                         </div>
                         <div className="panel-body">
                             {
@@ -50,4 +51,4 @@ class Technology extends Component {
     }
 }
 
-export default Technology;
+export default Entertainment;

@@ -6,7 +6,7 @@ class Topbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-default navbar-fixed-top">
-                <div className="container-fluid">
+                <div className="container">
                     <div className="navbar-header">
                         <div className="navbar-brand">
                             <LinkContainer to={{pathname: "/"}}><MenuItem><i className="fa fa-users" aria-hidden="true"></i> CITIZEN</MenuItem></LinkContainer>

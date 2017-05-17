@@ -21,26 +21,28 @@ class Politics extends Component {
         }
         return(
             <div className="col-xs-12">
-                <div className="panel panel-primary" style={{ marginTop: '20px' }}>
-                    <div className="panel-heading">
-                        <h1 style={{ marginLeft: '20px' }}><i className="fa fa-pinterest-p" aria-hidden="true"></i>  Politics</h1>
-                    </div>
-                    <div className="panel-body">
-                        {
-                            data && data.map((data, index) => (
-                                    <div className="col-xs-3" key={data._id}>
-                                        <div className="panel panel-info" style={{ minHeight: '250px' }}>
-                                            <div className="panel-heading">
-                                                <h4 style={{ marginLeft: '5px'}}>{data._source.name}</h4>
-                                            </div>
-                                            <div className="panel-body">
-                                                {data._source.description}
+                <div className="container">
+                    <div className="panel panel-primary" style={{ marginTop: '20px' }}>
+                        <div className="panel-heading">
+                            <h1 style={{ marginLeft: '20px' }}><i className="fa fa-pinterest-p" aria-hidden="true"></i>  Politics</h1>
+                        </div>
+                        <div className="panel-body">
+                            {
+                                data && data.map((data, index) => (
+                                        <div className="col-xs-6" key={data._id}>
+                                            <div className="panel panel-info" style={{ minHeight: '250px' }}>
+                                                <div className="panel-heading">
+                                                    <h4 style={{ marginLeft: '5px'}}>{data._source.name}</h4>
+                                                </div>
+                                                <div className="panel-body">
+                                                    {data._source.description}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    )
                                 )
-                            )
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
