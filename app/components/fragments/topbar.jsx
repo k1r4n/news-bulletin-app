@@ -13,7 +13,7 @@ class Topbar extends Component {
                         </div>
                     </div>
                     <ul className="nav navbar-nav">
-                        <LinkContainer to={{pathname: "/"}}><MenuItem><i className="fa fa-google" aria-hidden="true"></i> General</MenuItem></LinkContainer>
+                        <LinkContainer to={{pathname: "/general"}}><MenuItem><i className="fa fa-google" aria-hidden="true"></i> General</MenuItem></LinkContainer>
                         <LinkContainer to={{pathname: "/politics"}}><MenuItem><i className="fa fa-pinterest-p" aria-hidden="true"></i> Politics</MenuItem></LinkContainer>
                         <LinkContainer to={{pathname: "/business"}}><MenuItem><i className="fa fa-bold" aria-hidden="true"></i> Business</MenuItem></LinkContainer>
                         <LinkContainer to={{pathname: "/technology"}}><MenuItem><i className="fa fa-tumblr-square" aria-hidden="true"></i> Technology</MenuItem></LinkContainer>

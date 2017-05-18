@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import General from '../general';
-import GeneralArticles from '../general/articles';
 import Politics from '../politics';
 import Business from '../business';
 import Technology from '../technology';
@@ -9,6 +8,7 @@ import ScienceAndNature from '../science-and-nature';
 import Entertainment from '../entertainment';
 import Music from '../music';
 import Sports from '../sports';
+import Articles from '../articles';
 
 class TopbarRoutes extends Component {
     render() {
@@ -16,6 +16,7 @@ class TopbarRoutes extends Component {
             <div>
                 <Switch>
                     <Route exact path='/' component={General}></Route>
+                    <Route exact path='/general' component={General}></Route>
                     <Route exact path='/politics' component={Politics}></Route>
                     <Route exact path='/business' component={Business}></Route>
                     <Route exact path='/technology' component={Technology}></Route>
@@ -23,14 +24,14 @@ class TopbarRoutes extends Component {
                     <Route exact path='/entertainment' component={Entertainment}></Route>
                     <Route exact path='/music' component={Music}></Route>
                     <Route exact path='/sports' component={Sports}></Route>
-                    <Route exact path='/general/articles' component={General}></Route>
-                    <Route exact path='/politics/articles' component={Politics}></Route>
-                    <Route exact path='/business/articles' component={Business}></Route>
-                    <Route exact path='/technology/articles' component={Technology}></Route>
-                    <Route exact path='/science-and-nature/articles' component={General}></Route>
-                    <Route exact path='/entertainment/articles' component={General}></Route>
-                    <Route exact path='/music/articles' component={General}></Route>
-                    <Route exact path='/sports/articles' component={General}></Route>
+                    <Route exact path='/general/:id' component={Articles}></Route>
+                    <Route exact path='/politics/:id' component={Articles}></Route>
+                    <Route exact path='/business/:id' component={Articles}></Route>
+                    <Route exact path='/technology/:id' component={Articles}></Route>
+                    <Route exact path='/science-and-nature/:id' component={Articles}></Route>
+                    <Route exact path='/entertainment/:id' component={Articles}></Route>
+                    <Route exact path='/music/:id' component={Articles}></Route>
+                    <Route exact path='/sports/:id' component={Articles}></Route>
                 </Switch>
             </div>
         );

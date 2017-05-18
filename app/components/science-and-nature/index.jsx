@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import GeneralRoutes from './articles';
+import { Link } from 'react-router-dom';
 
 class ScienceAndNature extends Component {
     constructor(props) {
@@ -30,16 +30,18 @@ class ScienceAndNature extends Component {
                         <div className="panel-body">
                             {
                                 data && data.map((data, index) => (
-                                        <div className="col-xs-6" key={data._id}>
-                                            <div className="panel panel-info" style={{ minHeight: '250px' }}>
-                                                <div className="panel-heading">
-                                                    <h4 style={{ marginLeft: '5px'}}>{data._source.name}</h4>
-                                                </div>
-                                                <div className="panel-body">
-                                                    {data._source.description}
+                                        <Link to ={`/science-and-nature/${data._id}`} key={data._id}>
+                                            <div className="col-xs-6">
+                                                <div className="panel panel-info" style={{ minHeight: '200px' }}>
+                                                    <div className="panel-heading">
+                                                        <h4 style={{ marginLeft: '5px'}}>{data._source.name}</h4>
+                                                    </div>
+                                                    <div className="panel-body">
+                                                        {data._source.description}
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     )
                                 )
                             }
