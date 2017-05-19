@@ -5,7 +5,7 @@ import { MenuItem } from 'react-bootstrap';
 export default class Footer extends Component {
     render() {
         return (
-            <nav className="navbar navbar-inverse navbar-fixed-bottom">
+            <nav className="navbar navbar-inverse" style={{borderRadius: '0px', position: 'fixed', left: '0px', right: '0px', bottom: '0px'}}>
                 <div className="container">
                     <div className="col-xs-4">
                         <h3 style={{ color: '#FFFFFF' }}>About us</h3>

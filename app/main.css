@@ -1,7 +1,34 @@
+#container {
+  height: 400px;
+  width: 400px;
+  position: relative;
+}
+#image {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#text {
+  z-index: 100;
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  background-color: #000000;
+  opacity: .5;
+}
+html {
+   height: 100%;
+}
 body {
     background-color: #EFF0F1;
     padding-top: 50px;
-    padding-bottom: 500px
+    min-height: 100%;
+    margin:0;
+    padding-bottom: 0px; 
 }
 
 li {

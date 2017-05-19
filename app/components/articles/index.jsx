@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Styles from '../../main.css';
 
 class Articles extends Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class Articles extends Component {
         }
         return (
             <div className="container">
-                <div className="panel panel-primary" style={{ marginTop: '20px', marginBottom: '20px' }}>
+                <div className="panel panel-primary" style={{ marginTop: '20px', marginBottom: '300px' }}>
                     {
                         data &&
                         <div className="panel-heading">
@@ -39,25 +40,18 @@ class Articles extends Component {
                     {
                         data && data[0]._source.articles.map((article, index) => (
                             <a href={article.url} target="_blank" key={index}>
-                                <div className="col-xs-6">
-                                    <div className="panel panel-info" style={{ minHeight: '600px' }}>
-                                        <div className="panel-heading">
-                                            <h3>{article.title}</h3>
-                                        </div>
+                                <div className="col-xs-6" title={article.description}>
+                                    <div className="panel panel-default" style={{ maxHeight: '100%', minHeight: '100%', minHeight:'400px' }}>
                                         <div className="panel-body">
-                                            <div className="col-xs-12">
-                                                <div className="pull-left">
-                                                    <strong>{article.author}</strong>
-                                                </div>
-                                                <div className="pull-right">
-                                                    <span>{article.publishedAt}</span>
-                                                </div>
+                                            <div className="pull-left">
+                                                <strong>{article.author}</strong>
                                             </div>
-                                            <div className="col-xs-12">
-                                                <img src={article.urlToImage} style={{ maxWidth: '100%', maxHeight: '100%'}} />
+                                            <div className="pull-right">
+                                                <span>{article.publishedAt}</span>
                                             </div>
-                                            <div className="col-xs-12">
-                                                <p>{article.description}</p>
+                                            <div className="col-xs-12" id={Styles.container}>
+                                                <img id={Styles.image} src={article.urlToImage} style={{ width: '500px', height: '400px'}} />
+                                                <p id={Styles.text} style={{ width: '500px'}}>{article.title}</p>
                                             </div>
                                         </div>
                                     </div>

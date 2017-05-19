@@ -21,9 +21,9 @@ class General extends Component {
             data = this.state.data;
         }
         return(
-            <div className="col-xs-12">
+            <div className="clearfix">
                 <div className="container">
-                    <div className="panel panel-primary" style={{ marginTop: '20px' }}>
+                    <div className="panel panel-primary" style={{ marginTop: '20px', marginBottom: '300px' }}>
                         <div className="panel-heading">
                             <h1 style={{ marginLeft: '20px' }}><i className="fa fa-google" aria-hidden="true"></i>  General</h1>
                         </div>
